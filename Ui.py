@@ -4,11 +4,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def __init__(self):
         self.setupUi()
-        self.setupHomeScreen()
-        self.setupLoggedInScreen()
-        self.setupEtc()
-
-        self.idForJoinCheckIndex=None
 
     def setupUi(self):
         self.mainWindow = QtWidgets.QMainWindow()
@@ -18,18 +13,18 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(self.mainWindow)
         self.centralwidget.setObjectName("centralwidget")
 
+#==============================================================================
+#==============================================================================
+        # 각종 menu를 포함한 stacked widget
         self.menu = QtWidgets.QStackedWidget(self.centralwidget)
         self.menu.setGeometry(QtCore.QRect(0, 0, 480, 320))
         self.menu.setObjectName("menu")
         self.menu.setCurrentIndex(0)
 
-#==============================================================================
-#==============================================================================
-
-    def setupHomeScreen(self):
-
+        # menu의 첫번째 페이지
         self.homeScreen = QtWidgets.QWidget()
         self.homeScreen.setObjectName("homeScreen")
+        self.menu.addWidget(self.homeScreen)
 
         self.join = QtWidgets.QPushButton(self.homeScreen)
         self.join.setGeometry(QtCore.QRect(340, 32, 120, 40))
@@ -47,15 +42,20 @@ class Ui_MainWindow(object):
         self.quit.setGeometry(QtCore.QRect(340, 248, 120, 40))
         self.quit.setObjectName("quit")
 
+#==============================================================================
+        #로그인 전 화면전환을 위한 stacked widget
         self.beforeLogin = QtWidgets.QStackedWidget(self.homeScreen)
         self.beforeLogin.setGeometry(QtCore.QRect(20, 32, 300, 256))
         self.beforeLogin.setStyleSheet("background: rgb(255, 255, 255);")
         self.beforeLogin.setFrameShape(QtWidgets.QFrame.Box)
         self.beforeLogin.setObjectName("beforeLogin")
         self.beforeLogin.setCurrentIndex(0)
-#==============================================================================
+
+#------------------------------------------------------------------------------
+        #beforeLogin의 첫번째 페이지
         self.beforeLogindefaultPage = QtWidgets.QWidget()
         self.beforeLogindefaultPage.setObjectName("beforeLogindefaultPage")
+        self.beforeLogin.addWidget(self.beforeLogindefaultPage)
 
         self.nameOfGameLabel = QtWidgets.QLabel(self.beforeLogindefaultPage)
         self.nameOfGameLabel.setGeometry(QtCore.QRect(50, 103, 200, 50))
@@ -67,10 +67,11 @@ class Ui_MainWindow(object):
         self.nameOfGameLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.nameOfGameLabel.setObjectName("nameOfGameLabel")
 
-        self.beforeLogin.addWidget(self.beforeLogindefaultPage)
-
+#------------------------------------------------------------------------------
+        #beforeLogin의 두번째 페이지
         self.joinPage = QtWidgets.QWidget()
         self.joinPage.setObjectName("joinPage")
+        self.beforeLogin.addWidget(self.joinPage)
 
         self.idForJoinInput = QtWidgets.QLineEdit(self.joinPage)
         self.idForJoinInput.setGeometry(QtCore.QRect(60, 70, 151, 20))
@@ -146,7 +147,6 @@ class Ui_MainWindow(object):
         self.mailForJoinInput.setObjectName("mailForJoinInput")
 
         self.joinBtn = QtWidgets.QPushButton(self.joinPage)
-        # self.joinBtn.setEnabled(False)
         self.joinBtn.setGeometry(QtCore.QRect(110, 220, 100, 20))
         self.joinBtn.setStyleSheet("background-color: rgb(191, 191, 191)")
         self.joinBtn.setObjectName("joinBtn")
@@ -161,11 +161,11 @@ class Ui_MainWindow(object):
         self.checkForMailBtn.setStyleSheet("background-color: rgb(191, 191, 191)")
         self.checkForMailBtn.setObjectName("checkForMailBtn")
 
-
-        self.beforeLogin.addWidget(self.joinPage)
-#==============================================================================
+#------------------------------------------------------------------------------
+        #beforeLogin의 세번째 페이지
         self.loginPage = QtWidgets.QWidget()
         self.loginPage.setObjectName("loginPage")
+        self.beforeLogin.addWidget(self.loginPage)
 
         self.idForLoginLabel = QtWidgets.QLabel(self.loginPage)
         self.idForLoginLabel.setGeometry(QtCore.QRect(30, 90, 20, 20))
@@ -199,10 +199,11 @@ class Ui_MainWindow(object):
         self.loginFailLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.loginFailLabel.setObjectName("loginFailLabel")
 
-        self.beforeLogin.addWidget(self.loginPage)
-#==============================================================================
+#------------------------------------------------------------------------------
+        #beforeLogin의 네번째 페이지
         self.findInfoPage = QtWidgets.QWidget()
         self.findInfoPage.setObjectName("findInfoPage")
+        self.beforeLogin.addWidget(self.findInfoPage)
 
         self.findIdBtn = QtWidgets.QPushButton(self.findInfoPage)
         self.findIdBtn.setGeometry(QtCore.QRect(60, 60, 100, 20))
@@ -214,13 +215,17 @@ class Ui_MainWindow(object):
         self.findPwBtn.setStyleSheet("background-color: rgb(191, 191, 191)")
         self.findPwBtn.setObjectName("findPwBtn")
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
         self.find = QtWidgets.QStackedWidget(self.findInfoPage)
         self.find.setGeometry(QtCore.QRect(19, 90, 250, 150))
         self.find.setObjectName("find")
         self.find.setCurrentIndex(0)
-#------------------------------------------------------------------------------
+
+        #find의 첫번째 페이지
         self.findIdPage = QtWidgets.QWidget()
         self.findIdPage.setObjectName("findIdPage")
+        self.find.addWidget(self.findIdPage)
 
         self.mailForFindIdInput = QtWidgets.QLineEdit(self.findIdPage)
         self.mailForFindIdInput.setGeometry(QtCore.QRect(40, 10, 210, 20))
@@ -247,10 +252,10 @@ class Ui_MainWindow(object):
         self.findBtnForFindId.setStyleSheet("background-color: rgb(191, 191, 191)")
         self.findBtnForFindId.setObjectName("findBtnForFindId")
 
-        self.find.addWidget(self.findIdPage)
-#------------------------------------------------------------------------------
+        #find의 첫번째 페이지
         self.findPwPage = QtWidgets.QWidget()
         self.findPwPage.setObjectName("findPwPage")
+        self.find.addWidget(self.findPwPage)
 
         self.idForFindPwInput = QtWidgets.QLineEdit(self.findPwPage)
         self.idForFindPwInput.setGeometry(QtCore.QRect(40, 10, 210, 20))
@@ -290,13 +295,11 @@ class Ui_MainWindow(object):
         self.findBtnForFindPw.setStyleSheet("background-color: rgb(191, 191, 191)")
         self.findBtnForFindPw.setObjectName("findBtnForFindPw")
 
-
-        self.find.addWidget(self.findPwPage)
-
-        self.beforeLogin.addWidget(self.findInfoPage)
-#==============================================================================
+#------------------------------------------------------------------------------
+        #beforeLogin의 다섯번째 페이지
         self.quitPage = QtWidgets.QWidget()
         self.quitPage.setObjectName("quitPage")
+        self.beforeLogin.addWidget(self.quitPage)
 
         self.quitLabel = QtWidgets.QLabel(self.quitPage)
         self.quitLabel.setEnabled(True)
@@ -310,14 +313,11 @@ class Ui_MainWindow(object):
         self.quitBtn.setStyleSheet("background-color: rgb(191, 191, 191)")
         self.quitBtn.setObjectName("quitBtn")
 
-        self.beforeLogin.addWidget(self.quitPage)
-
-        self.menu.addWidget(self.homeScreen)
 #==============================================================================
-#==============================================================================
-    def setupLoggedInScreen(self):
+        # menu의 두번째 페이지
         self.loggedInScreen = QtWidgets.QWidget()
         self.loggedInScreen.setObjectName("loggedInScreen")
+        self.menu.addWidget(self.loggedInScreen)
 
         self.logout = QtWidgets.QPushButton(self.loggedInScreen)
         self.logout.setGeometry(QtCore.QRect(340, 248, 120, 40))
@@ -335,15 +335,18 @@ class Ui_MainWindow(object):
         self.ranking.setGeometry(QtCore.QRect(340, 176, 120, 40))
         self.ranking.setObjectName("ranking")
 #==============================================================================
+        #로그인 후 화면전환을 위한 stacked widget
         self.afterLogin = QtWidgets.QStackedWidget(self.loggedInScreen)
         self.afterLogin.setGeometry(QtCore.QRect(20, 32, 300, 256))
         self.afterLogin.setStyleSheet("background: rgb(255, 255, 255);")
         self.afterLogin.setFrameShape(QtWidgets.QFrame.Box)
         self.afterLogin.setObjectName("afterLogin")
         self.afterLogin.setCurrentIndex(0)
-
+#------------------------------------------------------------------------------
+        #afterLogin의 첫번째 페이지
         self.afterLogindefaultPage = QtWidgets.QWidget()
         self.afterLogindefaultPage.setObjectName("afterLogindefaultPage")
+        self.afterLogin.addWidget(self.afterLogindefaultPage)
 
         self.helloLabel = QtWidgets.QLabel(self.afterLogindefaultPage)
         self.helloLabel.setGeometry(QtCore.QRect(0, 103, 300, 50))
@@ -355,17 +358,21 @@ class Ui_MainWindow(object):
         self.helloLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.helloLabel.setObjectName("helloLabel")
 
-        self.afterLogin.addWidget(self.afterLogindefaultPage)
-#==============================================================================
+#------------------------------------------------------------------------------
+        #afterLogin의 두번째 페이지
         self.gamePage = QtWidgets.QWidget()
         self.gamePage.setObjectName("gamePage")
+        self.afterLogin.addWidget(self.gamePage)
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         self.game = QtWidgets.QStackedWidget(self.gamePage)
         self.game.setGeometry(QtCore.QRect(0, 20, 300, 236))
         self.game.setObjectName("game")
 
+        #game의 첫번째 페이지
         self.standbyPage = QtWidgets.QWidget()
         self.standbyPage.setObjectName("standbyPage")
+        self.game.addWidget(self.standbyPage)
 
         self.explainGame = QtWidgets.QTextBrowser(self.standbyPage)
         self.explainGame.setGeometry(QtCore.QRect(0, 30, 300, 121))
@@ -373,11 +380,11 @@ class Ui_MainWindow(object):
         self.explainGame.setLineWidth(1)
         self.explainGame.setObjectName("explainGame")
 
-        self.game.addWidget(self.standbyPage)
-
+        #game의 두번째 페이지
         self.playPage = QtWidgets.QWidget()
         self.playPage.setObjectName("playPage")
-#------------------------------------------------------------------------------
+        self.game.addWidget(self.playPage)
+
         self.trialLabel = QtWidgets.QLabel(self.playPage)
         self.trialLabel.setEnabled(True)
         self.trialLabel.setGeometry(QtCore.QRect(0, 45, 300, 20))
@@ -408,36 +415,36 @@ class Ui_MainWindow(object):
         self.answerFailLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.answerFailLabel.setObjectName("answerFailLabel")
 
-        self.game.addWidget(self.playPage)
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         self.btn = QtWidgets.QStackedWidget(self.gamePage)
         self.btn.setGeometry(QtCore.QRect(0, 190, 300, 66))
         self.btn.setObjectName("btn")
 
+        #btn의 첫번째 페이지
         self.playBtnPage = QtWidgets.QWidget()
         self.playBtnPage.setObjectName("playBtnPage")
+        self.btn.addWidget(self.playBtnPage)
 
         self.playBtn = QtWidgets.QPushButton(self.playBtnPage)
         self.playBtn.setGeometry(QtCore.QRect(100, 10, 100, 20))
         self.playBtn.setStyleSheet("background-color: rgb(191, 191, 191)")
         self.playBtn.setObjectName("playBtn")
 
-        self.btn.addWidget(self.playBtnPage)
-
+        #btn의 두번째 페이지
         self.enterBtnPage = QtWidgets.QWidget()
         self.enterBtnPage.setObjectName("enterBtnPage")
+        self.btn.addWidget(self.enterBtnPage)
 
         self.enterBtn = QtWidgets.QPushButton(self.enterBtnPage)
         self.enterBtn.setGeometry(QtCore.QRect(100, 10, 100, 20))
         self.enterBtn.setStyleSheet("background-color: rgb(191, 191, 191)")
         self.enterBtn.setObjectName("enterBtn")
 
-        self.btn.addWidget(self.enterBtnPage)
-
-        self.afterLogin.addWidget(self.gamePage)
-#==============================================================================
+#------------------------------------------------------------------------------
+        #afterLogin의 세번째 페이지
         self.myInfoPage = QtWidgets.QWidget()
         self.myInfoPage.setObjectName("myInfoPage")
+        self.afterLogin.addWidget(self.myInfoPage)
 
         self.mailForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
         self.mailForMyInfoLabel.setGeometry(QtCore.QRect(39, 130, 31, 20))
@@ -535,10 +542,11 @@ class Ui_MainWindow(object):
         self.playGamesForMyInfoInput.setText("")
         self.playGamesForMyInfoInput.setObjectName("playGamesForMyInfoInput")
 
-        self.afterLogin.addWidget(self.myInfoPage)
-#==============================================================================
+#------------------------------------------------------------------------------
+        #afterLogin의 네번째 페이지
         self.rankingPage = QtWidgets.QWidget()
         self.rankingPage.setObjectName("rankingPage")
+        self.afterLogin.addWidget(self.rankingPage)
 
         self.rank1Input = QtWidgets.QLineEdit(self.rankingPage)
         self.rank1Input.setEnabled(False)
@@ -691,10 +699,11 @@ class Ui_MainWindow(object):
         self.rank10Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.rank10Label.setObjectName("rank10Label")
 
-        self.afterLogin.addWidget(self.rankingPage)
-#==============================================================================
+#------------------------------------------------------------------------------
+        #afterLogin의 다섯번째 페이지
         self.logoutPage = QtWidgets.QWidget()
         self.logoutPage.setObjectName("logoutPage")
+        self.afterLogin.addWidget(self.logoutPage)
 
         self.logoutLabel = QtWidgets.QLabel(self.logoutPage)
         self.logoutLabel.setGeometry(QtCore.QRect(0, 100, 300, 20))
@@ -707,16 +716,11 @@ class Ui_MainWindow(object):
         self.logoutBtn.setStyleSheet("background-color: rgb(191, 191, 191)")
         self.logoutBtn.setObjectName("logoutBtn")
 
-        self.afterLogin.addWidget(self.logoutPage)
-
-        self.menu.addWidget(self.loggedInScreen)
 #==============================================================================
-    def setupEtc(self):
-        self.mainWindow.setCentralWidget(self.centralwidget)
 
+        self.mainWindow.setCentralWidget(self.centralwidget)
         self.retranslateUi()
         QtCore.QMetaObject.connectSlotsByName(self.mainWindow)
-
         self.mainWindow.show()
 
     def retranslateUi(self):
@@ -730,10 +734,8 @@ class Ui_MainWindow(object):
         self.idForLoginLabel.setText(_translate("MainWindow", "ID"))
         self.pwForLoginLabel.setText(_translate("MainWindow", "PW"))
         self.loginBtn.setText(_translate("MainWindow", "LOGIN"))
-        # self.loginFailLabel.setText(_translate("MainWindow", "INCORRECT ID OR PW"))
         self.idForJoinLabel.setText(_translate("MainWindow", "ID"))
         self.pwForJoinLabel.setText(_translate("MainWindow", "PW"))
-        # self.joinFailLabel.setText(_translate("MainWindow", "INCORRECT ID OR PW"))
         self.nameForJoinLabel.setText(_translate("MainWindow", "NAME"))
         self.ageForJoinLabel.setText(_translate("MainWindow", "AGE"))
         self.mailForJoinLabel.setText(_translate("MainWindow", "MAIL"))
@@ -743,11 +745,9 @@ class Ui_MainWindow(object):
         self.findIdBtn.setText(_translate("MainWindow", "FIND ID"))
         self.findPwBtn.setText(_translate("MainWindow", "FIND PW"))
         self.mailForFindIdLabel.setText(_translate("MainWindow", "MAIL"))
-        # self.findIdFailLabel.setText(_translate("MainWindow", "INCORRECT ID OR PW"))
         self.findBtnForFindId.setText(_translate("MainWindow", "FIND"))
         self.idForFindPwLabel.setText(_translate("MainWindow", "ID"))
         self.mailForFindPwLabel.setText(_translate("MainWindow", "MAIL"))
-        # self.findPwFailLabel.setText(_translate("MainWindow", "INCORRECT ID OR PW"))
         self.findBtnForFindPw.setText(_translate("MainWindow", "FIND"))
         self.quitLabel.setText(_translate("MainWindow", "QUIT TO CLOSE THE WINDOW."))
         self.quitBtn.setText(_translate("MainWindow", "QUIT"))
@@ -755,7 +755,6 @@ class Ui_MainWindow(object):
         self.myInfo.setText(_translate("MainWindow", "MY INFO"))
         self.playGame.setText(_translate("MainWindow", "PLAY GAME"))
         self.ranking.setText(_translate("MainWindow", "RANKING"))
-        # self.helloLabel.setText(_translate("MainWindow", "UP AND DOWN"))
         self.explainGame.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -765,15 +764,12 @@ class Ui_MainWindow(object):
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">IF THE NUMBER YOU ENTERED IS SMALLER THAN ANSWER, \'UP\' MESSAGE, IF NOT, \'DOWN\' MESSAGE WILL BE PRINDTED.</p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">SCORE</span> IS THE NUMBER OF<span style=\" font-weight:600;\"> TRIAL.</span></p></body></html>"))
         self.playBtn.setText(_translate("MainWindow", "PLAY"))
-        # self.trialLabel.setText(_translate("MainWindow", "THE NUMBER OF TRIAL: 1"))
         self.putAnswerLabel.setText(_translate("MainWindow", "PUT INTEGER BETWEEN 1 AND 50"))
         self.enterBtn.setText(_translate("MainWindow", "ENTER"))
-        # self.answerFailLabel.setText(_translate("MainWindow", "INCORRECT ID OR PW"))
         self.mailForMyInfoLabel.setText(_translate("MainWindow", "MAIL"))
         self.ageForMyInfoLabel.setText(_translate("MainWindow", "AGE"))
         self.idForMyInfoLabel.setText(_translate("MainWindow", "ID"))
         self.nameForMyInfoLabel.setText(_translate("MainWindow", "NAME"))
-        # self.myInfoLabel.setText(_translate("MainWindow", "YOU CAN USE THIS ID"))
         self.bestScoreForMyInfoLabel.setText(_translate("MainWindow", "BEST SCORE"))
         self.playGamesForMyInfoLabel.setText(_translate("MainWindow", "PLAY GAMES"))
         self.rank1Label.setText(_translate("MainWindow", "1ST"))
@@ -790,13 +786,6 @@ class Ui_MainWindow(object):
         self.logoutLabel.setText(_translate("MainWindow", "LOGOUT TO RETURN TO BEFORE LOGIN PAGE."))
         self.logoutBtn.setText(_translate("MainWindow", "LOGOUT"))
 
-
-    def retranslateJoinFailLabel(self):
-        _translate = QtCore.QCoreApplication.translate
-        if self.idForJoinCheckIndex==0:
-            self.joinFailLabel.setText(_translate("MainWindow", "YOU CAN USE"))
-        else:
-            pass
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
