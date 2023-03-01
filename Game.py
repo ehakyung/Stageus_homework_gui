@@ -15,6 +15,7 @@ class Game:
 
         self.ui.playBtn.clicked.connect(self.setAnswerEvent)
         self.ui.enterBtn.clicked.connect(self.enterBtnEvent)
+        self.ui.answerInput.returnPressed.connect(self.enterBtnEvent)
 
     def setAnswerEvent(self):
         self.answer=random.randint(1,50)
