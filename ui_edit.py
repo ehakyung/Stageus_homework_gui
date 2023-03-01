@@ -21,6 +21,960 @@ class Ui_MainWindow(object):
         self.mainWindow.setObjectName("MainWindow")
         self.mainWindow.resize(410, 490)
 
+#         self.centralwidget = QtWidgets.QWidget(self.mainWindow)
+#         self.centralwidget.setObjectName("centralwidget")
+#         self.menu = QtWidgets.QStackedWidget(self.centralwidget)
+#         self.menu.setGeometry(QtCore.QRect(0, 0, 410, 490))
+#         self.menu.setStyleSheet("background-color: rgb(245, 197, 135);\n"
+# "")
+#         self.menu.setObjectName("menu")
+#         self.homeScreen = QtWidgets.QWidget()
+#         self.homeScreen.setObjectName("homeScreen")
+#         self.beforeLogin = QtWidgets.QStackedWidget(self.homeScreen)
+#         self.beforeLogin.setGeometry(QtCore.QRect(10, 90, 390, 390))
+#         self.beforeLogin.setStyleSheet("background-color: rgb(255, 235, 195);\n"
+# "border-radius: 5px;")
+#         self.beforeLogin.setObjectName("beforeLogin")
+#         self.beforeLogindefaultPage = QtWidgets.QWidget()
+#         self.beforeLogindefaultPage.setObjectName("beforeLogindefaultPage")
+#         self.nameOfGameLabel = QtWidgets.QLabel(self.beforeLogindefaultPage)
+#         self.nameOfGameLabel.setGeometry(QtCore.QRect(54, 170, 282, 50))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(50)
+#         self.nameOfGameLabel.setFont(font)
+#         self.nameOfGameLabel.setStyleSheet("color: rgb(255, 139, 8);")
+#         self.nameOfGameLabel.setObjectName("nameOfGameLabel")
+#         self.beforeLogin.addWidget(self.beforeLogindefaultPage)
+#         self.joinPage = QtWidgets.QWidget()
+#         self.joinPage.setObjectName("joinPage")
+#         self.pwForJoinLabel = QtWidgets.QLabel(self.joinPage)
+#         self.pwForJoinLabel.setGeometry(QtCore.QRect(66, 142, 30, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.pwForJoinLabel.setFont(font)
+#         self.pwForJoinLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.pwForJoinLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.pwForJoinLabel.setObjectName("pwForJoinLabel")
+#         self.idForJoinLabel = QtWidgets.QLabel(self.joinPage)
+#         self.idForJoinLabel.setGeometry(QtCore.QRect(69, 102, 30, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.idForJoinLabel.setFont(font)
+#         self.idForJoinLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.idForJoinLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+#         self.idForJoinLabel.setObjectName("idForJoinLabel")
+#         self.pwOfJoinInput = QtWidgets.QLineEdit(self.joinPage)
+#         self.pwOfJoinInput.setGeometry(QtCore.QRect(60, 139, 270, 30))
+#         self.pwOfJoinInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.pwOfJoinInput.setObjectName("pwOfJoinInput")
+#         self.idForJoinInput = QtWidgets.QLineEdit(self.joinPage)
+#         self.idForJoinInput.setGeometry(QtCore.QRect(60, 99, 270, 30))
+#         self.idForJoinInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.idForJoinInput.setObjectName("idForJoinInput")
+#         self.nameForJoinLabel = QtWidgets.QLabel(self.joinPage)
+#         self.nameForJoinLabel.setGeometry(QtCore.QRect(69, 182, 50, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.nameForJoinLabel.setFont(font)
+#         self.nameForJoinLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.nameForJoinLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.nameForJoinLabel.setObjectName("nameForJoinLabel")
+#         self.nameForJoinInput = QtWidgets.QLineEdit(self.joinPage)
+#         self.nameForJoinInput.setGeometry(QtCore.QRect(60, 179, 270, 30))
+#         self.nameForJoinInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.nameForJoinInput.setObjectName("nameForJoinInput")
+#         self.ageForJoinInput = QtWidgets.QLineEdit(self.joinPage)
+#         self.ageForJoinInput.setGeometry(QtCore.QRect(60, 219, 270, 30))
+#         self.ageForJoinInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.ageForJoinInput.setObjectName("ageForJoinInput")
+#         self.ageForJoinLabel = QtWidgets.QLabel(self.joinPage)
+#         self.ageForJoinLabel.setGeometry(QtCore.QRect(65, 222, 40, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.ageForJoinLabel.setFont(font)
+#         self.ageForJoinLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.ageForJoinLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.ageForJoinLabel.setObjectName("ageForJoinLabel")
+#         self.mailForJoinInput = QtWidgets.QLineEdit(self.joinPage)
+#         self.mailForJoinInput.setGeometry(QtCore.QRect(60, 259, 270, 30))
+#         self.mailForJoinInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.mailForJoinInput.setObjectName("mailForJoinInput")
+#         self.mailForJoinLabel = QtWidgets.QLabel(self.joinPage)
+#         self.mailForJoinLabel.setGeometry(QtCore.QRect(61, 262, 50, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.mailForJoinLabel.setFont(font)
+#         self.mailForJoinLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.mailForJoinLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.mailForJoinLabel.setObjectName("mailForJoinLabel")
+#         self.joinBtn = QtWidgets.QPushButton(self.joinPage)
+#         self.joinBtn.setGeometry(QtCore.QRect(150, 309, 90, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.joinBtn.setFont(font)
+#         self.joinBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.joinBtn.setObjectName("joinBtn")
+#         self.checkForIdBtn = QtWidgets.QPushButton(self.joinPage)
+#         self.checkForIdBtn.setGeometry(QtCore.QRect(259, 100, 70, 28))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.checkForIdBtn.setFont(font)
+#         self.checkForIdBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.checkForIdBtn.setObjectName("checkForIdBtn")
+#         self.checkForMailBtn = QtWidgets.QPushButton(self.joinPage)
+#         self.checkForMailBtn.setGeometry(QtCore.QRect(259, 260, 70, 28))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.checkForMailBtn.setFont(font)
+#         self.checkForMailBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.checkForMailBtn.setObjectName("checkForMailBtn")
+#         self.joinFailLabel = QtWidgets.QLabel(self.joinPage)
+#         self.joinFailLabel.setGeometry(QtCore.QRect(0, 55, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.joinFailLabel.setFont(font)
+#         self.joinFailLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.joinFailLabel.setObjectName("joinFailLabel")
+#         self.nameForJoinInput.raise_()
+#         self.pwOfJoinInput.raise_()
+#         self.idForJoinInput.raise_()
+#         self.idForJoinLabel.raise_()
+#         self.pwForJoinLabel.raise_()
+#         self.nameForJoinLabel.raise_()
+#         self.ageForJoinInput.raise_()
+#         self.ageForJoinLabel.raise_()
+#         self.mailForJoinInput.raise_()
+#         self.mailForJoinLabel.raise_()
+#         self.joinBtn.raise_()
+#         self.checkForIdBtn.raise_()
+#         self.checkForMailBtn.raise_()
+#         self.joinFailLabel.raise_()
+#         self.beforeLogin.addWidget(self.joinPage)
+#         self.loginPage = QtWidgets.QWidget()
+#         self.loginPage.setObjectName("loginPage")
+#         self.idForLoginInput = QtWidgets.QLineEdit(self.loginPage)
+#         self.idForLoginInput.setGeometry(QtCore.QRect(70, 137, 250, 30))
+#         self.idForLoginInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:40px;")
+#         self.idForLoginInput.setObjectName("idForLoginInput")
+#         self.idForLoginLabel = QtWidgets.QLabel(self.loginPage)
+#         self.idForLoginLabel.setGeometry(QtCore.QRect(73, 140, 30, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.idForLoginLabel.setFont(font)
+#         self.idForLoginLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.idForLoginLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.idForLoginLabel.setObjectName("idForLoginLabel")
+#         self.loginBtn = QtWidgets.QPushButton(self.loginPage)
+#         self.loginBtn.setGeometry(QtCore.QRect(150, 230, 90, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.loginBtn.setFont(font)
+#         self.loginBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.loginBtn.setObjectName("loginBtn")
+#         self.pwForLoginLabel = QtWidgets.QLabel(self.loginPage)
+#         self.pwForLoginLabel.setGeometry(QtCore.QRect(73, 180, 30, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.pwForLoginLabel.setFont(font)
+#         self.pwForLoginLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.pwForLoginLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.pwForLoginLabel.setObjectName("pwForLoginLabel")
+#         self.pwForLoginInput = QtWidgets.QLineEdit(self.loginPage)
+#         self.pwForLoginInput.setEchoMode(QtWidgets.QLineEdit.Password)
+#         self.pwForLoginInput.setGeometry(QtCore.QRect(70, 177, 250, 30))
+#         self.pwForLoginInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:40px;")
+#         self.pwForLoginInput.setObjectName("pwForLoginInput")
+#         self.loginFailLabel = QtWidgets.QLabel(self.loginPage)
+#         self.loginFailLabel.setGeometry(QtCore.QRect(0, 90, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.loginFailLabel.setFont(font)
+#         self.loginFailLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.loginFailLabel.setObjectName("loginFailLabel")
+#         self.idForLoginInput.raise_()
+#         self.idForLoginLabel.raise_()
+#         self.loginBtn.raise_()
+#         self.pwForLoginInput.raise_()
+#         self.pwForLoginLabel.raise_()
+#         self.loginFailLabel.raise_()
+#         self.beforeLogin.addWidget(self.loginPage)
+#         self.findInfoPage = QtWidgets.QWidget()
+#         self.findInfoPage.setObjectName("findInfoPage")
+#         self.findIdBtn = QtWidgets.QPushButton(self.findInfoPage)
+#         self.findIdBtn.setGeometry(QtCore.QRect(60, 83, 130, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.findIdBtn.setFont(font)
+#         self.findIdBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.findIdBtn.setObjectName("findIdBtn")
+#         self.findPwBtn = QtWidgets.QPushButton(self.findInfoPage)
+#         self.findPwBtn.setGeometry(QtCore.QRect(200, 83, 130, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.findPwBtn.setFont(font)
+#         self.findPwBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.findPwBtn.setObjectName("findPwBtn")
+#         self.find = QtWidgets.QStackedWidget(self.findInfoPage)
+#         self.find.setGeometry(QtCore.QRect(0, 130, 390, 190))
+#         self.find.setObjectName("find")
+#         self.findIdPage = QtWidgets.QWidget()
+#         self.findIdPage.setObjectName("findIdPage")
+#         self.findBtnForFindId = QtWidgets.QPushButton(self.findIdPage)
+#         self.findBtnForFindId.setGeometry(QtCore.QRect(150, 112, 90, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.findBtnForFindId.setFont(font)
+#         self.findBtnForFindId.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.findBtnForFindId.setObjectName("findBtnForFindId")
+#         self.mailForFindIdInput = QtWidgets.QLineEdit(self.findIdPage)
+#         self.mailForFindIdInput.setGeometry(QtCore.QRect(60, 69, 270, 30))
+#         self.mailForFindIdInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.mailForFindIdInput.setObjectName("mailForFindIdInput")
+#         self.mailForFindIdLabel = QtWidgets.QLabel(self.findIdPage)
+#         self.mailForFindIdLabel.setGeometry(QtCore.QRect(61, 72, 50, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.mailForFindIdLabel.setFont(font)
+#         self.mailForFindIdLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.mailForFindIdLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.mailForFindIdLabel.setObjectName("mailForFindIdLabel")
+#         self.findIdFailLabel = QtWidgets.QLabel(self.findIdPage)
+#         self.findIdFailLabel.setGeometry(QtCore.QRect(0, 15, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.findIdFailLabel.setFont(font)
+#         self.findIdFailLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.findIdFailLabel.setObjectName("findIdFailLabel")
+#         self.find.addWidget(self.findIdPage)
+#         self.findPwPage = QtWidgets.QWidget()
+#         self.findPwPage.setObjectName("findPwPage")
+#         self.idForFindPwLabel = QtWidgets.QLabel(self.findPwPage)
+#         self.idForFindPwLabel.setGeometry(QtCore.QRect(69, 63, 30, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.idForFindPwLabel.setFont(font)
+#         self.idForFindPwLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.idForFindPwLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+#         self.idForFindPwLabel.setObjectName("idForFindPwLabel")
+#         self.mailForFindPwInput = QtWidgets.QLineEdit(self.findPwPage)
+#         self.mailForFindPwInput.setGeometry(QtCore.QRect(60, 97, 270, 30))
+#         self.mailForFindPwInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.mailForFindPwInput.setObjectName("mailForFindPwInput")
+#         self.idForFindPwInput = QtWidgets.QLineEdit(self.findPwPage)
+#         self.idForFindPwInput.setGeometry(QtCore.QRect(60, 60, 270, 30))
+#         self.idForFindPwInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.idForFindPwInput.setObjectName("idForFindPwInput")
+#         self.findBtnForFindPw = QtWidgets.QPushButton(self.findPwPage)
+#         self.findBtnForFindPw.setGeometry(QtCore.QRect(150, 140, 90, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.findBtnForFindPw.setFont(font)
+#         self.findBtnForFindPw.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.findBtnForFindPw.setObjectName("findBtnForFindPw")
+#         self.mailForFindPwLabel = QtWidgets.QLabel(self.findPwPage)
+#         self.mailForFindPwLabel.setGeometry(QtCore.QRect(61, 100, 50, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.mailForFindPwLabel.setFont(font)
+#         self.mailForFindPwLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.mailForFindPwLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.mailForFindPwLabel.setObjectName("mailForFindPwLabel")
+#         self.findPwFailLabel = QtWidgets.QLabel(self.findPwPage)
+#         self.findPwFailLabel.setGeometry(QtCore.QRect(0, 10, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.findPwFailLabel.setFont(font)
+#         self.findPwFailLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.findPwFailLabel.setObjectName("findPwFailLabel")
+#         self.idForFindPwInput.raise_()
+#         self.idForFindPwLabel.raise_()
+#         self.mailForFindPwInput.raise_()
+#         self.findBtnForFindPw.raise_()
+#         self.mailForFindPwLabel.raise_()
+#         self.findPwFailLabel.raise_()
+#         self.find.addWidget(self.findPwPage)
+#         self.beforeLogin.addWidget(self.findInfoPage)
+#         self.quitPage = QtWidgets.QWidget()
+#         self.quitPage.setObjectName("quitPage")
+#         self.quitLabel = QtWidgets.QLabel(self.quitPage)
+#         self.quitLabel.setGeometry(QtCore.QRect(0, 160, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.quitLabel.setFont(font)
+#         self.quitLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.quitLabel.setObjectName("quitLabel")
+#         self.quitBtn = QtWidgets.QPushButton(self.quitPage)
+#         self.quitBtn.setGeometry(QtCore.QRect(150, 210, 90, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.quitBtn.setFont(font)
+#         self.quitBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.quitBtn.setObjectName("quitBtn")
+#         self.beforeLogin.addWidget(self.quitPage)
+#         self.join = QtWidgets.QPushButton(self.homeScreen)
+#         self.join.setGeometry(QtCore.QRect(10, 10, 90, 70))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.join.setFont(font)
+#         self.join.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.join.setObjectName("join")
+#         self.login = QtWidgets.QPushButton(self.homeScreen)
+#         self.login.setGeometry(QtCore.QRect(110, 10, 90, 70))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.login.setFont(font)
+#         self.login.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.login.setObjectName("login")
+#         self.findInfo = QtWidgets.QPushButton(self.homeScreen)
+#         self.findInfo.setGeometry(QtCore.QRect(210, 10, 90, 70))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.findInfo.setFont(font)
+#         self.findInfo.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.findInfo.setObjectName("findInfo")
+#         self.quit = QtWidgets.QPushButton(self.homeScreen)
+#         self.quit.setGeometry(QtCore.QRect(310, 10, 90, 70))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.quit.setFont(font)
+#         self.quit.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.quit.setObjectName("quit")
+#         self.menu.addWidget(self.homeScreen)
+#         self.loggedInScreen = QtWidgets.QWidget()
+#         self.loggedInScreen.setObjectName("loggedInScreen")
+#         self.myInfo = QtWidgets.QPushButton(self.loggedInScreen)
+#         self.myInfo.setGeometry(QtCore.QRect(110, 10, 90, 70))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.myInfo.setFont(font)
+#         self.myInfo.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.myInfo.setObjectName("myInfo")
+#         self.logout = QtWidgets.QPushButton(self.loggedInScreen)
+#         self.logout.setGeometry(QtCore.QRect(310, 10, 90, 70))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.logout.setFont(font)
+#         self.logout.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.logout.setObjectName("logout")
+#         self.playGame = QtWidgets.QPushButton(self.loggedInScreen)
+#         self.playGame.setGeometry(QtCore.QRect(10, 10, 90, 70))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.playGame.setFont(font)
+#         self.playGame.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.playGame.setObjectName("playGame")
+#         self.ranking = QtWidgets.QPushButton(self.loggedInScreen)
+#         self.ranking.setGeometry(QtCore.QRect(210, 10, 90, 70))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.ranking.setFont(font)
+#         self.ranking.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.ranking.setObjectName("ranking")
+#         self.afterLogin = QtWidgets.QStackedWidget(self.loggedInScreen)
+#         self.afterLogin.setGeometry(QtCore.QRect(10, 90, 390, 390))
+#         self.afterLogin.setStyleSheet("background-color: rgb(255, 235, 195);\n"
+# "border-radius: 5px;")
+#         self.afterLogin.setObjectName("afterLogin")
+#         self.afterLogindefaultPage = QtWidgets.QWidget()
+#         self.afterLogindefaultPage.setObjectName("afterLogindefaultPage")
+#         self.helloLabel = QtWidgets.QLabel(self.afterLogindefaultPage)
+#         self.helloLabel.setGeometry(QtCore.QRect(0, 170, 390, 50))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(50)
+#         self.helloLabel.setFont(font)
+#         self.helloLabel.setStyleSheet("color: rgb(255, 139, 8);")
+#         self.helloLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.helloLabel.setObjectName("helloLabel")
+#         self.afterLogin.addWidget(self.afterLogindefaultPage)
+#         self.gamePage = QtWidgets.QWidget()
+#         self.gamePage.setObjectName("gamePage")
+#         self.game = QtWidgets.QStackedWidget(self.gamePage)
+#         self.game.setGeometry(QtCore.QRect(0, 50, 390, 200))
+#         self.game.setObjectName("game")
+#         self.standbyPage = QtWidgets.QWidget()
+#         self.standbyPage.setObjectName("standbyPage")
+#         self.explainGame = QtWidgets.QPlainTextEdit(self.standbyPage)
+#         self.explainGame.setGeometry(QtCore.QRect(10, 30, 390, 161))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.explainGame.setFont(font)
+#         self.explainGame.setObjectName("explainGame")
+#         self.game.addWidget(self.standbyPage)
+#         self.playPage = QtWidgets.QWidget()
+#         self.playPage.setObjectName("playPage")
+#         self.trialLabel = QtWidgets.QLabel(self.playPage)
+#         self.trialLabel.setGeometry(QtCore.QRect(0, 40, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         font.setBold(True)
+#         font.setWeight(75)
+#         self.trialLabel.setFont(font)
+#         self.trialLabel.setStyleSheet("color: rgb(255, 100, 5);")
+#         self.trialLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.trialLabel.setObjectName("trialLabel")
+#         self.putAnswerLabel = QtWidgets.QLabel(self.playPage)
+#         self.putAnswerLabel.setGeometry(QtCore.QRect(0, 80, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         font.setBold(False)
+#         font.setWeight(50)
+#         self.putAnswerLabel.setFont(font)
+#         self.putAnswerLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.putAnswerLabel.setObjectName("putAnswerLabel")
+#         self.answerInput = QtWidgets.QLineEdit(self.playPage)
+#         self.answerInput.setGeometry(QtCore.QRect(70, 120, 250, 30))
+#         self.answerInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:10 px;")
+#         self.answerInput.setObjectName("answerInput")
+#         self.answerFailLabel = QtWidgets.QLabel(self.playPage)
+#         self.answerFailLabel.setGeometry(QtCore.QRect(0, 160, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         font.setBold(False)
+#         font.setWeight(50)
+#         self.answerFailLabel.setFont(font)
+#         self.answerFailLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.answerFailLabel.setObjectName("answerFailLabel")
+#         self.game.addWidget(self.playPage)
+#         self.btn = QtWidgets.QStackedWidget(self.gamePage)
+#         self.btn.setGeometry(QtCore.QRect(0, 250, 390, 80))
+#         self.btn.setObjectName("btn")
+#         self.playBtnPage = QtWidgets.QWidget()
+#         self.playBtnPage.setObjectName("playBtnPage")
+#         self.playBtn = QtWidgets.QPushButton(self.playBtnPage)
+#         self.playBtn.setGeometry(QtCore.QRect(150, 10, 90, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.playBtn.setFont(font)
+#         self.playBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.playBtn.setObjectName("playBtn")
+#         self.btn.addWidget(self.playBtnPage)
+#         self.enterBtnPage = QtWidgets.QWidget()
+#         self.enterBtnPage.setObjectName("enterBtnPage")
+#         self.enterBtn = QtWidgets.QPushButton(self.enterBtnPage)
+#         self.enterBtn.setGeometry(QtCore.QRect(150, 10, 90, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.enterBtn.setFont(font)
+#         self.enterBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.enterBtn.setObjectName("enterBtn")
+#         self.btn.addWidget(self.enterBtnPage)
+#         self.afterLogin.addWidget(self.gamePage)
+#         self.myInfoPage = QtWidgets.QWidget()
+#         self.myInfoPage.setObjectName("myInfoPage")
+#         self.idForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
+#         self.idForMyInfoLabel.setGeometry(QtCore.QRect(69, 118, 20, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.idForMyInfoLabel.setFont(font)
+#         self.idForMyInfoLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.idForMyInfoLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+#         self.idForMyInfoLabel.setObjectName("idForMyInfoLabel")
+#         self.playGamesForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
+#         self.playGamesForMyInfoInput.setEnabled(False)
+#         self.playGamesForMyInfoInput.setGeometry(QtCore.QRect(60, 275, 270, 30))
+#         self.playGamesForMyInfoInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:120px;")
+#         self.playGamesForMyInfoInput.setObjectName("playGamesForMyInfoInput")
+#         self.mailForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
+#         self.mailForMyInfoInput.setEnabled(False)
+#         self.mailForMyInfoInput.setGeometry(QtCore.QRect(60, 195, 270, 30))
+#         self.mailForMyInfoInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:55px;")
+#         self.mailForMyInfoInput.setObjectName("mailForMyInfoInput")
+#         self.mailForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
+#         self.mailForMyInfoLabel.setGeometry(QtCore.QRect(61, 198, 50, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.mailForMyInfoLabel.setFont(font)
+#         self.mailForMyInfoLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.mailForMyInfoLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.mailForMyInfoLabel.setObjectName("mailForMyInfoLabel")
+#         self.myInfoLabel = QtWidgets.QLabel(self.myInfoPage)
+#         self.myInfoLabel.setGeometry(QtCore.QRect(0, 71, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.myInfoLabel.setFont(font)
+#         self.myInfoLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.myInfoLabel.setObjectName("myInfoLabel")
+#         self.nameForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
+#         self.nameForMyInfoLabel.setGeometry(QtCore.QRect(69, 158, 50, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.nameForMyInfoLabel.setFont(font)
+#         self.nameForMyInfoLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.nameForMyInfoLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.nameForMyInfoLabel.setObjectName("nameForMyInfoLabel")
+#         self.nameForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
+#         self.nameForMyInfoInput.setEnabled(False)
+#         self.nameForMyInfoInput.setGeometry(QtCore.QRect(60, 155, 130, 30))
+#         self.nameForMyInfoInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:65px;")
+#         self.nameForMyInfoInput.setObjectName("nameForMyInfoInput")
+#         self.bestScoreForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
+#         self.bestScoreForMyInfoInput.setEnabled(False)
+#         self.bestScoreForMyInfoInput.setGeometry(QtCore.QRect(60, 235, 270, 30))
+#         self.bestScoreForMyInfoInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:120px;")
+#         self.bestScoreForMyInfoInput.setObjectName("bestScoreForMyInfoInput")
+#         self.idForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
+#         self.idForMyInfoInput.setEnabled(False)
+#         self.idForMyInfoInput.setGeometry(QtCore.QRect(60, 115, 270, 30))
+#         self.idForMyInfoInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:30px;")
+#         self.idForMyInfoInput.setObjectName("idForMyInfoInput")
+#         self.bestScoreForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
+#         self.bestScoreForMyInfoLabel.setGeometry(QtCore.QRect(65, 238, 110, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.bestScoreForMyInfoLabel.setFont(font)
+#         self.bestScoreForMyInfoLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.bestScoreForMyInfoLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.bestScoreForMyInfoLabel.setObjectName("bestScoreForMyInfoLabel")
+#         self.ageForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
+#         self.ageForMyInfoInput.setEnabled(False)
+#         self.ageForMyInfoInput.setGeometry(QtCore.QRect(200, 155, 130, 30))
+#         self.ageForMyInfoInput.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:55px;")
+#         self.ageForMyInfoInput.setObjectName("ageForMyInfoInput")
+#         self.ageForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
+#         self.ageForMyInfoLabel.setGeometry(QtCore.QRect(209, 158, 40, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.ageForMyInfoLabel.setFont(font)
+#         self.ageForMyInfoLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.ageForMyInfoLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.ageForMyInfoLabel.setObjectName("ageForMyInfoLabel")
+#         self.playGamesForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
+#         self.playGamesForMyInfoLabel.setGeometry(QtCore.QRect(65, 278, 110, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.playGamesForMyInfoLabel.setFont(font)
+#         self.playGamesForMyInfoLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.playGamesForMyInfoLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.playGamesForMyInfoLabel.setObjectName("playGamesForMyInfoLabel")
+#         self.nameForMyInfoInput.raise_()
+#         self.idForMyInfoInput.raise_()
+#         self.idForMyInfoLabel.raise_()
+#         self.playGamesForMyInfoInput.raise_()
+#         self.mailForMyInfoInput.raise_()
+#         self.mailForMyInfoLabel.raise_()
+#         self.myInfoLabel.raise_()
+#         self.nameForMyInfoLabel.raise_()
+#         self.bestScoreForMyInfoInput.raise_()
+#         self.bestScoreForMyInfoLabel.raise_()
+#         self.ageForMyInfoInput.raise_()
+#         self.ageForMyInfoLabel.raise_()
+#         self.playGamesForMyInfoLabel.raise_()
+#         self.afterLogin.addWidget(self.myInfoPage)
+#         self.rankingPage = QtWidgets.QWidget()
+#         self.rankingPage.setObjectName("rankingPage")
+#         self.rankingLabel = QtWidgets.QLabel(self.rankingPage)
+#         self.rankingLabel.setGeometry(QtCore.QRect(0, 9, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rankingLabel.setFont(font)
+#         self.rankingLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.rankingLabel.setObjectName("rankingLabel")
+#         self.rank1Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank1Input.setEnabled(False)
+#         self.rank1Input.setGeometry(QtCore.QRect(40, 42, 310, 30))
+#         self.rank1Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank1Input.setObjectName("rank1Input")
+#         self.rank1Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank1Label.setGeometry(QtCore.QRect(42, 45, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank1Label.setFont(font)
+#         self.rank1Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank1Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank1Label.setObjectName("rank1Label")
+#         self.rank2Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank2Input.setEnabled(False)
+#         self.rank2Input.setGeometry(QtCore.QRect(40, 76, 310, 30))
+#         self.rank2Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank2Input.setObjectName("rank2Input")
+#         self.rank2Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank2Label.setGeometry(QtCore.QRect(42, 79, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank2Label.setFont(font)
+#         self.rank2Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank2Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank2Label.setObjectName("rank2Label")
+#         self.rank4Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank4Input.setEnabled(False)
+#         self.rank4Input.setGeometry(QtCore.QRect(40, 144, 310, 30))
+#         self.rank4Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank4Input.setObjectName("rank4Input")
+#         self.rank3Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank3Input.setEnabled(False)
+#         self.rank3Input.setGeometry(QtCore.QRect(40, 110, 310, 30))
+#         self.rank3Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank3Input.setObjectName("rank3Input")
+#         self.rank4Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank4Label.setGeometry(QtCore.QRect(42, 147, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank4Label.setFont(font)
+#         self.rank4Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank4Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank4Label.setObjectName("rank4Label")
+#         self.rank3Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank3Label.setGeometry(QtCore.QRect(42, 113, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank3Label.setFont(font)
+#         self.rank3Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank3Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank3Label.setObjectName("rank3Label")
+#         self.rank5Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank5Label.setGeometry(QtCore.QRect(42, 181, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank5Label.setFont(font)
+#         self.rank5Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank5Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank5Label.setObjectName("rank5Label")
+#         self.rank5Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank5Input.setEnabled(False)
+#         self.rank5Input.setGeometry(QtCore.QRect(40, 178, 310, 30))
+#         self.rank5Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank5Input.setObjectName("rank5Input")
+#         self.rank7Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank7Input.setEnabled(False)
+#         self.rank7Input.setGeometry(QtCore.QRect(40, 246, 310, 30))
+#         self.rank7Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank7Input.setObjectName("rank7Input")
+#         self.rank9Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank9Label.setGeometry(QtCore.QRect(42, 317, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank9Label.setFont(font)
+#         self.rank9Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank9Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank9Label.setObjectName("rank9Label")
+#         self.rank6Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank6Input.setEnabled(False)
+#         self.rank6Input.setGeometry(QtCore.QRect(40, 212, 310, 30))
+#         self.rank6Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank6Input.setObjectName("rank6Input")
+#         self.rank8Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank8Label.setGeometry(QtCore.QRect(42, 283, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank8Label.setFont(font)
+#         self.rank8Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank8Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank8Label.setObjectName("rank8Label")
+#         self.rank7Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank7Label.setGeometry(QtCore.QRect(42, 249, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank7Label.setFont(font)
+#         self.rank7Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank7Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank7Label.setObjectName("rank7Label")
+#         self.rank9Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank9Input.setEnabled(False)
+#         self.rank9Input.setGeometry(QtCore.QRect(40, 314, 310, 30))
+#         self.rank9Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank9Input.setObjectName("rank9Input")
+#         self.rank6Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank6Label.setGeometry(QtCore.QRect(42, 215, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank6Label.setFont(font)
+#         self.rank6Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank6Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank6Label.setObjectName("rank6Label")
+#         self.rank10Label = QtWidgets.QLabel(self.rankingPage)
+#         self.rank10Label.setGeometry(QtCore.QRect(42, 351, 45, 24))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.rank10Label.setFont(font)
+#         self.rank10Label.setStyleSheet("color: rgb(255, 122, 8);\n"
+# "background-color:white;")
+#         self.rank10Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+#         self.rank10Label.setObjectName("rank10Label")
+#         self.rank10Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank10Input.setEnabled(False)
+#         self.rank10Input.setGeometry(QtCore.QRect(40, 348, 310, 30))
+#         self.rank10Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank10Input.setObjectName("rank10Input")
+#         self.rank8Input = QtWidgets.QLineEdit(self.rankingPage)
+#         self.rank8Input.setEnabled(False)
+#         self.rank8Input.setGeometry(QtCore.QRect(40, 280, 310, 30))
+#         self.rank8Input.setStyleSheet("background-color: white;\n"
+# "border-radius: 7px;\n"
+# "border: 1px solid rgb(255, 139, 8);\n"
+# "padding-left:60px;")
+#         self.rank8Input.setObjectName("rank8Input")
+#         self.rank10Input.raise_()
+#         self.rank9Input.raise_()
+#         self.rank8Input.raise_()
+#         self.rank5Input.raise_()
+#         self.rankingLabel.raise_()
+#         self.rank1Input.raise_()
+#         self.rank1Label.raise_()
+#         self.rank2Input.raise_()
+#         self.rank2Label.raise_()
+#         self.rank4Input.raise_()
+#         self.rank3Input.raise_()
+#         self.rank4Label.raise_()
+#         self.rank3Label.raise_()
+#         self.rank5Label.raise_()
+#         self.rank7Input.raise_()
+#         self.rank9Label.raise_()
+#         self.rank6Input.raise_()
+#         self.rank8Label.raise_()
+#         self.rank7Label.raise_()
+#         self.rank6Label.raise_()
+#         self.rank10Label.raise_()
+#         self.afterLogin.addWidget(self.rankingPage)
+#         self.logoutPage = QtWidgets.QWidget()
+#         self.logoutPage.setObjectName("logoutPage")
+#         self.logoutLabel = QtWidgets.QLabel(self.logoutPage)
+#         self.logoutLabel.setGeometry(QtCore.QRect(0, 160, 390, 30))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.logoutLabel.setFont(font)
+#         self.logoutLabel.setAlignment(QtCore.Qt.AlignCenter)
+#         self.logoutLabel.setObjectName("logoutLabel")
+#         self.logoutBtn = QtWidgets.QPushButton(self.logoutPage)
+#         self.logoutBtn.setGeometry(QtCore.QRect(150, 210, 90, 32))
+#         font = QtGui.QFont()
+#         font.setFamily("TMON_1.0")
+#         font.setPointSize(17)
+#         self.logoutBtn.setFont(font)
+#         self.logoutBtn.setStyleSheet("color: white;\n"
+# "background-color: rgb(255, 139, 8);\n"
+# "border-radius: 5px;\n"
+# "border: 1px solid rgb(255, 232, 183);")
+#         self.logoutBtn.setObjectName("logoutBtn")
+#         self.afterLogin.addWidget(self.logoutPage)
+#         self.afterLogin.raise_()
+#         self.myInfo.raise_()
+#         self.logout.raise_()
+#         self.playGame.raise_()
+#         self.ranking.raise_()
+#         self.menu.addWidget(self.loggedInScreen)
+#         self.mainWindow.setCentralWidget(self.centralwidget)
+
+
+
         self.centralwidget = QtWidgets.QWidget(self.mainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.menu = QtWidgets.QStackedWidget(self.centralwidget)
@@ -55,7 +1009,7 @@ class Ui_MainWindow(object):
         font.setPointSize(17)
         self.pwForJoinLabel.setFont(font)
         self.pwForJoinLabel.setStyleSheet("color: rgb(255, 122, 8);\n"
-"background-color:white;")
+"background-color: white;")
         self.pwForJoinLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.pwForJoinLabel.setObjectName("pwForJoinLabel")
         self.idForJoinLabel = QtWidgets.QLabel(self.joinPage)
@@ -68,13 +1022,13 @@ class Ui_MainWindow(object):
 "background-color:white;")
         self.idForJoinLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.idForJoinLabel.setObjectName("idForJoinLabel")
-        self.pwOfJoinInput = QtWidgets.QLineEdit(self.joinPage)
-        self.pwOfJoinInput.setGeometry(QtCore.QRect(60, 139, 270, 30))
-        self.pwOfJoinInput.setStyleSheet("background-color: white;\n"
+        self.pwForJoinInput = QtWidgets.QLineEdit(self.joinPage)
+        self.pwForJoinInput.setGeometry(QtCore.QRect(60, 139, 270, 30))
+        self.pwForJoinInput.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
-        self.pwOfJoinInput.setObjectName("pwOfJoinInput")
+        self.pwForJoinInput.setObjectName("pwOfJoinInput")
         self.idForJoinInput = QtWidgets.QLineEdit(self.joinPage)
         self.idForJoinInput.setGeometry(QtCore.QRect(60, 99, 270, 30))
         self.idForJoinInput.setStyleSheet("background-color: white;\n"
@@ -175,7 +1129,7 @@ class Ui_MainWindow(object):
         self.joinFailLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.joinFailLabel.setObjectName("joinFailLabel")
         self.nameForJoinInput.raise_()
-        self.pwOfJoinInput.raise_()
+        self.pwForJoinInput.raise_()
         self.idForJoinInput.raise_()
         self.idForJoinLabel.raise_()
         self.pwForJoinLabel.raise_()
@@ -230,7 +1184,6 @@ class Ui_MainWindow(object):
         self.pwForLoginLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.pwForLoginLabel.setObjectName("pwForLoginLabel")
         self.pwForLoginInput = QtWidgets.QLineEdit(self.loginPage)
-        self.pwForLoginInput.setEchoMode(QtWidgets.QLineEdit.Password)
         self.pwForLoginInput.setGeometry(QtCore.QRect(70, 177, 250, 30))
         self.pwForLoginInput.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
@@ -263,7 +1216,8 @@ class Ui_MainWindow(object):
         self.findIdBtn.setStyleSheet("color: white;\n"
 "background-color: rgb(255, 139, 8);\n"
 "border-radius: 5px;\n"
-"border: 1px solid rgb(255, 232, 183);")
+"border: 1px solid rgb(0, 0, 0)\n"
+"")
         self.findIdBtn.setObjectName("findIdBtn")
         self.findPwBtn = QtWidgets.QPushButton(self.findInfoPage)
         self.findPwBtn.setGeometry(QtCore.QRect(200, 83, 130, 32))
@@ -412,7 +1366,7 @@ class Ui_MainWindow(object):
         self.join.setStyleSheet("color: white;\n"
 "background-color: rgb(255, 139, 8);\n"
 "border-radius: 5px;\n"
-"border: 1px solid rgb(255, 232, 183);")
+"border: 1px solid black;")
         self.join.setObjectName("join")
         self.login = QtWidgets.QPushButton(self.homeScreen)
         self.login.setGeometry(QtCore.QRect(110, 10, 90, 70))
@@ -423,7 +1377,7 @@ class Ui_MainWindow(object):
         self.login.setStyleSheet("color: white;\n"
 "background-color: rgb(255, 139, 8);\n"
 "border-radius: 5px;\n"
-"border: 1px solid rgb(255, 232, 183);")
+"border: 1px solid black;")
         self.login.setObjectName("login")
         self.findInfo = QtWidgets.QPushButton(self.homeScreen)
         self.findInfo.setGeometry(QtCore.QRect(210, 10, 90, 70))
@@ -434,7 +1388,7 @@ class Ui_MainWindow(object):
         self.findInfo.setStyleSheet("color: white;\n"
 "background-color: rgb(255, 139, 8);\n"
 "border-radius: 5px;\n"
-"border: 1px solid rgb(255, 232, 183);")
+"border: 1px solid black;")
         self.findInfo.setObjectName("findInfo")
         self.quit = QtWidgets.QPushButton(self.homeScreen)
         self.quit.setGeometry(QtCore.QRect(310, 10, 90, 70))
@@ -445,7 +1399,7 @@ class Ui_MainWindow(object):
         self.quit.setStyleSheet("color: white;\n"
 "background-color: rgb(255, 139, 8);\n"
 "border-radius: 5px;\n"
-"border: 1px solid rgb(255, 232, 183);")
+"border: 1px solid black;")
         self.quit.setObjectName("quit")
         self.menu.addWidget(self.homeScreen)
         self.loggedInScreen = QtWidgets.QWidget()
@@ -459,7 +1413,7 @@ class Ui_MainWindow(object):
         self.myInfo.setStyleSheet("color: white;\n"
 "background-color: rgb(255, 139, 8);\n"
 "border-radius: 5px;\n"
-"border: 1px solid rgb(255, 232, 183);")
+"border: 1px solid black;")
         self.myInfo.setObjectName("myInfo")
         self.logout = QtWidgets.QPushButton(self.loggedInScreen)
         self.logout.setGeometry(QtCore.QRect(310, 10, 90, 70))
@@ -470,7 +1424,7 @@ class Ui_MainWindow(object):
         self.logout.setStyleSheet("color: white;\n"
 "background-color: rgb(255, 139, 8);\n"
 "border-radius: 5px;\n"
-"border: 1px solid rgb(255, 232, 183);")
+"border: 1px solid black;")
         self.logout.setObjectName("logout")
         self.playGame = QtWidgets.QPushButton(self.loggedInScreen)
         self.playGame.setGeometry(QtCore.QRect(10, 10, 90, 70))
@@ -481,7 +1435,7 @@ class Ui_MainWindow(object):
         self.playGame.setStyleSheet("color: white;\n"
 "background-color: rgb(255, 139, 8);\n"
 "border-radius: 5px;\n"
-"border: 1px solid rgb(255, 232, 183);")
+"border: 1px solid black;")
         self.playGame.setObjectName("playGame")
         self.ranking = QtWidgets.QPushButton(self.loggedInScreen)
         self.ranking.setGeometry(QtCore.QRect(210, 10, 90, 70))
@@ -492,7 +1446,7 @@ class Ui_MainWindow(object):
         self.ranking.setStyleSheet("color: white;\n"
 "background-color: rgb(255, 139, 8);\n"
 "border-radius: 5px;\n"
-"border: 1px solid rgb(255, 232, 183);")
+"border: 1px solid black;")
         self.ranking.setObjectName("ranking")
         self.afterLogin = QtWidgets.QStackedWidget(self.loggedInScreen)
         self.afterLogin.setGeometry(QtCore.QRect(10, 90, 390, 390))
@@ -501,8 +1455,17 @@ class Ui_MainWindow(object):
         self.afterLogin.setObjectName("afterLogin")
         self.afterLogindefaultPage = QtWidgets.QWidget()
         self.afterLogindefaultPage.setObjectName("afterLogindefaultPage")
+        self.idSmileLabel = QtWidgets.QLabel(self.afterLogindefaultPage)
+        self.idSmileLabel.setGeometry(QtCore.QRect(0, 190, 390, 55))
+        font = QtGui.QFont()
+        font.setFamily("TMON_1.0")
+        font.setPointSize(50)
+        self.idSmileLabel.setFont(font)
+        self.idSmileLabel.setStyleSheet("color: rgb(255, 139, 8);")
+        self.idSmileLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.idSmileLabel.setObjectName("idSmileLavel")
         self.helloLabel = QtWidgets.QLabel(self.afterLogindefaultPage)
-        self.helloLabel.setGeometry(QtCore.QRect(0, 170, 390, 50))
+        self.helloLabel.setGeometry(QtCore.QRect(0, 130, 390, 55))
         font = QtGui.QFont()
         font.setFamily("TMON_1.0")
         font.setPointSize(50)
@@ -554,7 +1517,7 @@ class Ui_MainWindow(object):
         self.answerInput.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
-"padding-left:10 px;")
+"")
         self.answerInput.setObjectName("answerInput")
         self.answerFailLabel = QtWidgets.QLabel(self.playPage)
         self.answerFailLabel.setGeometry(QtCore.QRect(0, 160, 390, 30))
@@ -612,21 +1575,21 @@ class Ui_MainWindow(object):
         self.idForMyInfoLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.idForMyInfoLabel.setObjectName("idForMyInfoLabel")
         self.playGamesForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
-        self.playGamesForMyInfoInput.setEnabled(False)
         self.playGamesForMyInfoInput.setGeometry(QtCore.QRect(60, 275, 270, 30))
-        self.playGamesForMyInfoInput.setStyleSheet("background-color: white;\n"
+        self.playGamesForMyInfoInput.setStyleSheet("background-color: white;\n"                                                
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:120px;")
         self.playGamesForMyInfoInput.setObjectName("playGamesForMyInfoInput")
+        self.playGamesForMyInfoInput.setEnabled(False)
         self.mailForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
-        self.mailForMyInfoInput.setEnabled(False)
         self.mailForMyInfoInput.setGeometry(QtCore.QRect(60, 195, 270, 30))
         self.mailForMyInfoInput.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:55px;")
         self.mailForMyInfoInput.setObjectName("mailForMyInfoInput")
+        self.mailForMyInfoInput.setEnabled(False)
         self.mailForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
         self.mailForMyInfoLabel.setGeometry(QtCore.QRect(61, 198, 50, 24))
         font = QtGui.QFont()
@@ -656,29 +1619,29 @@ class Ui_MainWindow(object):
         self.nameForMyInfoLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.nameForMyInfoLabel.setObjectName("nameForMyInfoLabel")
         self.nameForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
-        self.nameForMyInfoInput.setEnabled(False)
         self.nameForMyInfoInput.setGeometry(QtCore.QRect(60, 155, 130, 30))
         self.nameForMyInfoInput.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:65px;")
         self.nameForMyInfoInput.setObjectName("nameForMyInfoInput")
+        self.nameForMyInfoInput.setEnabled(False)
         self.bestScoreForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
-        self.bestScoreForMyInfoInput.setEnabled(False)
         self.bestScoreForMyInfoInput.setGeometry(QtCore.QRect(60, 235, 270, 30))
         self.bestScoreForMyInfoInput.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:120px;")
         self.bestScoreForMyInfoInput.setObjectName("bestScoreForMyInfoInput")
+        self.bestScoreForMyInfoInput.setEnabled(False)
         self.idForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
-        self.idForMyInfoInput.setEnabled(False)
         self.idForMyInfoInput.setGeometry(QtCore.QRect(60, 115, 270, 30))
         self.idForMyInfoInput.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:30px;")
         self.idForMyInfoInput.setObjectName("idForMyInfoInput")
+        self.idForMyInfoInput.setEnabled(False)
         self.bestScoreForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
         self.bestScoreForMyInfoLabel.setGeometry(QtCore.QRect(65, 238, 110, 24))
         font = QtGui.QFont()
@@ -690,13 +1653,13 @@ class Ui_MainWindow(object):
         self.bestScoreForMyInfoLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.bestScoreForMyInfoLabel.setObjectName("bestScoreForMyInfoLabel")
         self.ageForMyInfoInput = QtWidgets.QLineEdit(self.myInfoPage)
-        self.ageForMyInfoInput.setEnabled(False)
         self.ageForMyInfoInput.setGeometry(QtCore.QRect(200, 155, 130, 30))
         self.ageForMyInfoInput.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:55px;")
         self.ageForMyInfoInput.setObjectName("ageForMyInfoInput")
+        self.ageForMyInfoInput.setEnabled(False)
         self.ageForMyInfoLabel = QtWidgets.QLabel(self.myInfoPage)
         self.ageForMyInfoLabel.setGeometry(QtCore.QRect(209, 158, 40, 24))
         font = QtGui.QFont()
@@ -742,13 +1705,13 @@ class Ui_MainWindow(object):
         self.rankingLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.rankingLabel.setObjectName("rankingLabel")
         self.rank1Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank1Input.setEnabled(False)
         self.rank1Input.setGeometry(QtCore.QRect(40, 42, 310, 30))
         self.rank1Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank1Input.setObjectName("rank1Input")
+        self.rank1Input.setEnabled(False)
         self.rank1Label = QtWidgets.QLabel(self.rankingPage)
         self.rank1Label.setGeometry(QtCore.QRect(42, 45, 45, 24))
         font = QtGui.QFont()
@@ -760,13 +1723,13 @@ class Ui_MainWindow(object):
         self.rank1Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.rank1Label.setObjectName("rank1Label")
         self.rank2Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank2Input.setEnabled(False)
         self.rank2Input.setGeometry(QtCore.QRect(40, 76, 310, 30))
         self.rank2Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank2Input.setObjectName("rank2Input")
+        self.rank2Input.setEnabled(False)
         self.rank2Label = QtWidgets.QLabel(self.rankingPage)
         self.rank2Label.setGeometry(QtCore.QRect(42, 79, 45, 24))
         font = QtGui.QFont()
@@ -778,21 +1741,21 @@ class Ui_MainWindow(object):
         self.rank2Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.rank2Label.setObjectName("rank2Label")
         self.rank4Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank4Input.setEnabled(False)
         self.rank4Input.setGeometry(QtCore.QRect(40, 144, 310, 30))
         self.rank4Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank4Input.setObjectName("rank4Input")
+        self.rank4Input.setEnabled(False)
         self.rank3Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank3Input.setEnabled(False)
         self.rank3Input.setGeometry(QtCore.QRect(40, 110, 310, 30))
         self.rank3Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank3Input.setObjectName("rank3Input")
+        self.rank3Input.setEnabled(False)
         self.rank4Label = QtWidgets.QLabel(self.rankingPage)
         self.rank4Label.setGeometry(QtCore.QRect(42, 147, 45, 24))
         font = QtGui.QFont()
@@ -824,21 +1787,21 @@ class Ui_MainWindow(object):
         self.rank5Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.rank5Label.setObjectName("rank5Label")
         self.rank5Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank5Input.setEnabled(False)
         self.rank5Input.setGeometry(QtCore.QRect(40, 178, 310, 30))
         self.rank5Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank5Input.setObjectName("rank5Input")
+        self.rank5Input.setEnabled(False)
         self.rank7Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank7Input.setEnabled(False)
         self.rank7Input.setGeometry(QtCore.QRect(40, 246, 310, 30))
         self.rank7Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank7Input.setObjectName("rank7Input")
+        self.rank7Input.setEnabled(False)
         self.rank9Label = QtWidgets.QLabel(self.rankingPage)
         self.rank9Label.setGeometry(QtCore.QRect(42, 317, 45, 24))
         font = QtGui.QFont()
@@ -850,13 +1813,13 @@ class Ui_MainWindow(object):
         self.rank9Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.rank9Label.setObjectName("rank9Label")
         self.rank6Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank6Input.setEnabled(False)
         self.rank6Input.setGeometry(QtCore.QRect(40, 212, 310, 30))
         self.rank6Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank6Input.setObjectName("rank6Input")
+        self.rank6Input.setEnabled(False)
         self.rank8Label = QtWidgets.QLabel(self.rankingPage)
         self.rank8Label.setGeometry(QtCore.QRect(42, 283, 45, 24))
         font = QtGui.QFont()
@@ -878,13 +1841,13 @@ class Ui_MainWindow(object):
         self.rank7Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.rank7Label.setObjectName("rank7Label")
         self.rank9Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank9Input.setEnabled(False)
         self.rank9Input.setGeometry(QtCore.QRect(40, 314, 310, 30))
         self.rank9Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank9Input.setObjectName("rank9Input")
+        self.rank9Input.setEnabled(False)
         self.rank6Label = QtWidgets.QLabel(self.rankingPage)
         self.rank6Label.setGeometry(QtCore.QRect(42, 215, 45, 24))
         font = QtGui.QFont()
@@ -906,21 +1869,21 @@ class Ui_MainWindow(object):
         self.rank10Label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.rank10Label.setObjectName("rank10Label")
         self.rank10Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank10Input.setEnabled(False)
         self.rank10Input.setGeometry(QtCore.QRect(40, 348, 310, 30))
         self.rank10Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank10Input.setObjectName("rank10Input")
+        self.rank10Input.setEnabled(False)
         self.rank8Input = QtWidgets.QLineEdit(self.rankingPage)
-        self.rank8Input.setEnabled(False)
         self.rank8Input.setGeometry(QtCore.QRect(40, 280, 310, 30))
         self.rank8Input.setStyleSheet("background-color: white;\n"
 "border-radius: 7px;\n"
 "border: 1px solid rgb(255, 139, 8);\n"
 "padding-left:60px;")
         self.rank8Input.setObjectName("rank8Input")
+        self.rank8Input.setEnabled(False)
         self.rank10Input.raise_()
         self.rank9Input.raise_()
         self.rank8Input.raise_()
@@ -972,6 +1935,10 @@ class Ui_MainWindow(object):
         self.ranking.raise_()
         self.menu.addWidget(self.loggedInScreen)
         self.mainWindow.setCentralWidget(self.centralwidget)
+
+
+
+
 
         self.retranslateUi()
         self.menu.setCurrentIndex(0)
@@ -1080,6 +2047,7 @@ class Ui_MainWindow(object):
         self.findBtnForFindPw.setText(_translate("MainWindow", "FIND"))
         self.quitLabel.setText(_translate("MainWindow", "QUIT TO CLOSE THE WINDOW."))
         self.quitBtn.setText(_translate("MainWindow", "QUIT"))
+        self.helloLabel.setText(_translate("MainWindow", "HELLO"))
         self.logout.setText(_translate("MainWindow", "LOGOUT"))
         self.myInfo.setText(_translate("MainWindow", "MY INFO"))
         self.playGame.setText(_translate("MainWindow", "PLAY"))
