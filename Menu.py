@@ -30,15 +30,40 @@ class Menu:
 
     def findInfoEvent(self):
         self.ui.beforeLogin.setCurrentIndex(3)
-
+        self.ui.find.setCurrentIndex(0)
+        self.ui.findIdBtn.setStyleSheet("color: white;\n"
+"background-color: rgb(255, 139, 8);\n"
+"border-radius: 5px;\n"
+"border: 1px solid black;")
+        self.ui.findPwBtn.setStyleSheet("color: white;\n"
+"background-color: rgb(255, 139, 8);\n"
+"border-radius: 5px;\n"
+"border: 1px solid rgb(255, 232, 183);")    
+        
     def quitEvent(self):
         self.ui.beforeLogin.setCurrentIndex(4)
 
     def findIdBtnEvent(self):
         self.ui.find.setCurrentIndex(0)
-
+        self.ui.findIdBtn.setStyleSheet("color: white;\n"
+"background-color: rgb(255, 139, 8);\n"
+"border-radius: 5px;\n"
+"border: 1px solid black;")
+        self.ui.findPwBtn.setStyleSheet("color: white;\n"
+"background-color: rgb(255, 139, 8);\n"
+"border-radius: 5px;\n"
+"border: 1px solid rgb(255, 232, 183);")
+        
     def findPwBtnEvent(self):
         self.ui.find.setCurrentIndex(1)
+        self.ui.findIdBtn.setStyleSheet("color: white;\n"
+"background-color: rgb(255, 139, 8);\n"
+"border-radius: 5px;\n"
+"border: 1px solid rgb(255, 232, 183);")
+        self.ui.findPwBtn.setStyleSheet("color: white;\n"
+"background-color: rgb(255, 139, 8);\n"
+"border-radius: 5px;\n"
+"border: 1px solid black;")        
 
     def changeMenu(self):
         self.ui.menu.setCurrentIndex(1)
